@@ -1,4 +1,4 @@
-package com.roksanagulewska.recipent.ui.theme
+package com.roksanagulewska.recipent.tags
 
 enum class RecipeCategory(name: String) {
     BREAKFAST("breakfast"),
@@ -9,5 +9,6 @@ enum class RecipeCategory(name: String) {
     SNACK("snack"),
     SAUCE("sauce"),
     BASIC("basic"),
+    DRINK("drink"),
     OTHER("other")
 }

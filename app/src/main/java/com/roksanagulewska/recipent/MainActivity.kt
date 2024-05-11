@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.tooling.preview.Preview
 import com.roksanagulewska.recipent.ui.theme.RecipentTheme
+import com.roksanagulewska.recipent.Recipe
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,6 +37,6 @@ fun RecipeCard(painter: Painter, recipe: Recipe) {
 @Composable
 fun GreetingPreview() {
     RecipentTheme {
-        RecipeCard()
+        //RecipeCard()
     }
 }
