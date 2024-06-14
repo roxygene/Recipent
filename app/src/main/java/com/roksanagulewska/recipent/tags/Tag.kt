@@ -79,9 +79,5 @@ abstract class Tag(name: String, color: TagColor) {
         val oliveOilDefaultTag = DefaultTag(DefaultFoodTag.OLIVE_OIL.name, TagColor.ORANGE)
         val sugarDefaultTag = DefaultTag(DefaultFoodTag.SUGAR.name, TagColor.ORANGE)
         val flourDefaultTag = DefaultTag(DefaultFoodTag.FLOUR.name, TagColor.ORANGE)
-
-
-
-
     }
 }

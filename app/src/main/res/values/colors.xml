@@ -1,21 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="orange">#FFFF6D00</color>
-    <color name="light_orange">#FFFFB200</color>
-    <color name="dark_purple">#FF523DBD</color>
-    <color name="purple">#FF907AD6</color>
-    <color name="light_purple">#FFCFC6ED</color>
-    <color name="very_light_purple">#FFe6e0f5</color>
+    <color name="orange1000">#FF3D1B00</color>
+    <color name="orange900">#FFFF6D00</color>
+    <color name="orange800">#FFFF9100</color>
+    <color name="orange700">#FFFFA201</color>
+    <color name="orange600">#FFFFB302</color>
+    <color name="orange500">#FFFFC109</color>
+    <color name="orange400">#FFFFC929</color>
+    <color name="orange300">#FFFFD34F</color>
+    <color name="orange200">#FFFFDE82</color>
+    <color name="orange100">#FFFFEBB3</color>
+    <color name="orange50">#FFFFF7E1</color>
+
+    <color name="purple1000">#FF21194D</color>
+    <color name="purple600">#FF523DBD</color>
+    <color name="purple500">#FF5C42C3</color>
+    <color name="purple400">#FF755DCD</color>
+    <color name="purple300">#FF8F7AD5</color>
+    <color name="purple200">#FFAFA0E1</color>
+    <color name="purple100">#FFCFC6EC</color>
+    <color name="purple50">#FFECE8F7</color>
 
     <color name="yellow">#FFFFEC1F</color>
     <color name="pink">#FFF566B0</color>
-    <color name="red">#FFEB0825</color>
     <color name="green">#FF19BE48</color>
     <color name="blue">#FF2CA4FF</color>
+    <color name="red">#FFEB0825</color>
 
-    <color name="light_grey">#FFADADAD</color>
-    <color name="grey">#FF858585</color>
-    <color name="almost_black">#FF1F1F1F</color>
+    <color name="light_red">#FFf7a1ab</color>
+    <color name="dark_red">#FF620410</color>
+
+    <color name="grey1000">#FF1F1F1F</color>
+    <color name="grey900">#FF262626</color>
+    <color name="grey800">#FF484848</color>
+    <color name="grey700">#FF676767</color>
+    <color name="grey600">#FF7B7B7B</color>
+    <color name="grey500">#FFA5A5A5</color>
+    <color name="grey400">#FFC3C3C3</color>
+    <color name="grey300">#FFE6E6E6</color>
+    <color name="grey200">#FFF1F1F1</color>
+    <color name="grey100">#FFF6F6F6</color>
 
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
