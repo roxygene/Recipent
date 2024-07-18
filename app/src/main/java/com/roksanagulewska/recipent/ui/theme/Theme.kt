@@ -72,7 +72,6 @@ private val LightColorScheme = lightColorScheme(
 
 )
 
-
 @Composable
 fun RecipentTheme(
     darkTheme: Boolean = false,
