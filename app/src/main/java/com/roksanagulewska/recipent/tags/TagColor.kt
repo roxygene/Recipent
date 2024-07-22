@@ -9,6 +9,6 @@ enum class TagColor(name: String, color: Color) {
     YELLOW("yellow", Yellow),
     BLUE("blue", Blue),
     PINK("pink", Pink),
-    ORANGE("orange", Orange900),
-    PURPLE("purple", Purple500)
+    ORANGE("orange", Orange600),
+    PURPLE("purple", Purple)
 }
