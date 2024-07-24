@@ -3,7 +3,7 @@ package com.roksanagulewska.recipent.tags
 import androidx.compose.ui.graphics.Color
 import com.roksanagulewska.recipent.ui.theme.*
 
-enum class TagColor(name: String, color: Color) {
+enum class TagColor(val colorName: String, val color: Color) {
     GREEN("green", Green),
     RED("red", Red),
     YELLOW("yellow", Yellow),

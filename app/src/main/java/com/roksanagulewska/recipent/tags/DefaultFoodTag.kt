@@ -1,6 +1,6 @@
 package com.roksanagulewska.recipent.tags
 
-enum class DefaultFoodTag(name: String) {
+enum class DefaultFoodTag(tagName: String) {
     //Diet tag names
     VEGETARIAN("vegetarian"),
     VEGAN("vegan"),

@@ -1,6 +1,6 @@
 package com.roksanagulewska.recipent.tags
 
-enum class RecipeCategory(name: String) {
+enum class RecipeCategory(val categoryName: String) {
     BREAKFAST("breakfast"),
     DINNER("dinner"),
     DESSERT("dessert"),

@@ -1,18 +1,18 @@
 package com.roksanagulewska.recipent.tags
 
-abstract class Tag(name: String, color: TagColor) {
+abstract class Tag(val tagName: String, val color: TagColor) {
     companion object {
         //Recipe category tags
-        val breakfastDefaultTag = DefaultTag(RecipeCategory.BREAKFAST.name, TagColor.YELLOW)
-        val dinnerDefaultTag = DefaultTag(RecipeCategory.DINNER.name, TagColor.BLUE)
-        val dessertDefaultTag = DefaultTag(RecipeCategory.DESSERT.name, TagColor.PINK)
-        val sideDefaultTag = DefaultTag(RecipeCategory.SIDE.name, TagColor.GREEN)
-        val soupDefaultTag = DefaultTag(RecipeCategory.SOUP.name, TagColor.ORANGE)
-        val snackDefaultTag = DefaultTag(RecipeCategory.SNACK.name, TagColor.PURPLE)
-        val sauceDefaultTag = DefaultTag(RecipeCategory.SAUCE.name, TagColor.ORANGE)
-        val basicDefaultTag = DefaultTag(RecipeCategory.BASIC.name, TagColor.YELLOW)
-        val drinkDefaultTag = DefaultTag(RecipeCategory.DRINK.name, TagColor.BLUE)
-        val otherDefaultTag = DefaultTag(RecipeCategory.OTHER.name, TagColor.PURPLE)
+        val breakfastDefaultTag = DefaultTag(RecipeCategory.BREAKFAST.categoryName, TagColor.YELLOW)
+        val dinnerDefaultTag = DefaultTag(RecipeCategory.DINNER.categoryName, TagColor.BLUE)
+        val dessertDefaultTag = DefaultTag(RecipeCategory.DESSERT.categoryName, TagColor.PINK)
+        val sideDefaultTag = DefaultTag(RecipeCategory.SIDE.categoryName, TagColor.GREEN)
+        val soupDefaultTag = DefaultTag(RecipeCategory.SOUP.categoryName, TagColor.ORANGE)
+        val snackDefaultTag = DefaultTag(RecipeCategory.SNACK.categoryName, TagColor.PURPLE)
+        val sauceDefaultTag = DefaultTag(RecipeCategory.SAUCE.categoryName, TagColor.ORANGE)
+        val basicDefaultTag = DefaultTag(RecipeCategory.BASIC.categoryName, TagColor.YELLOW)
+        val drinkDefaultTag = DefaultTag(RecipeCategory.DRINK.categoryName, TagColor.BLUE)
+        val otherDefaultTag = DefaultTag(RecipeCategory.OTHER.categoryName, TagColor.PURPLE)
 
         //Diet tags
         val vegetarianDefaultTag = DefaultTag(DefaultFoodTag.VEGETARIAN.name, TagColor.GREEN)

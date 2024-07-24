@@ -8,8 +8,11 @@ import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -20,6 +23,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.FavoriteBorder
@@ -73,6 +77,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    @OptIn(ExperimentalLayoutApi::class)
     @Composable
     fun RecipeCard(painter: Painter, recipe: Recipe, modifier: Modifier = Modifier) {
         Card(
@@ -118,8 +123,11 @@ class MainActivity : ComponentActivity() {
                     .background(MaterialTheme.colorScheme.surface)) {
                     Column(Modifier.weight(8F)) {
                         Text(text = recipe.name, color = MaterialTheme.colorScheme.onSecondaryContainer,)
-                        LazyRow {
-                            //list of tags
+                        FlowRow(
+                            horizontalArrangement = Arrangement.spacedBy(5.dp)
+                        ) {
+                            recipe.tags.forEach{element ->  TagItem(tag = element)}
+
                         }
                     }
                     Column(Modifier.weight(2F)) {
@@ -137,21 +145,37 @@ class MainActivity : ComponentActivity() {
         val painter = painterResource(id = R.drawable.spaghetti_bolognese)
         val ingredients = listOf<String>("pasta", "tomato", "beef", "mozarella")
         val recipe = Recipe("Spaghetti bolognese", ingredients, "some method", RecipeCategory.DINNER)
+        recipe.tags.add(Tag.dinnerDefaultTag)
+        recipe.tags.add(Tag.tomatoDefaultTag)//Fix capital letters
+        recipe.tags.add(Tag.pastaDefaultTag)
+
         RecipentTheme {
             RecipeCard(painter, recipe)
         }
     }
 
     @Composable
-    fun TagDisplay(tag: Tag) {
-        //Text(text = tag.name )//FIX
+    fun TagItem(tag: Tag) {
+        //Surface(color = tag.color.color,
+           // shape = RoundedCornerShape(10.dp)
+        //) {
+        Surface(color = tag.color.color,
+            shape = RoundedCornerShape(10.dp),
+            shadowElevation = 10.dp,
+            modifier = Modifier.padding(2.dp)
+        ) {
+            Text(text = tag.tagName, modifier = Modifier.padding(start = 6.dp, end = 6.dp, top = 3.dp, bottom = 3.dp))
+        }
+
+        //}
+
     }
 
     @Preview(showBackground = true, showSystemUi = false)
     @Composable
-    fun TagDisplayPreview() {
+    fun TagItemPreview() {
         RecipentTheme {
-            TagDisplay(Tag.dessertDefaultTag)
+            TagItem(Tag.dessertDefaultTag)
         }
     }
 
