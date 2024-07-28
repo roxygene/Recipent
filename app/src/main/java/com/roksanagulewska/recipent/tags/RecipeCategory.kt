@@ -2,7 +2,7 @@ package com.roksanagulewska.recipent.tags
 
 enum class RecipeCategory(val categoryName: String) {
     BREAKFAST("breakfast"),
-    DINNER("dinner"),
+    LUNCH_OR_DINNER("lunch/dinner"),
     DESSERT("dessert"),
     SIDE("side"),
     SOUP("soup"),
@@ -10,5 +10,5 @@ enum class RecipeCategory(val categoryName: String) {
     SAUCE("sauce"),
     BASIC("basic"),
     DRINK("drink"),
-    OTHER("other")
+    OTHER("other"),
 }

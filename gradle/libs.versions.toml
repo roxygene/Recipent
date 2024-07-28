@@ -1,4 +1,5 @@
 [versions]
+accompanist = "0.32.0"
 agp = "8.3.1"
 kotlin = "1.9.0"
 coreKtx = "1.12.0"
@@ -10,6 +11,10 @@ activityCompose = "1.8.2"
 composeBom = "2023.08.00"
 
 [libraries]
+accompanist-adaptive = { module = "com.google.accompanist:accompanist-adaptive", version.ref = "accompanist" }
+accompanist-permissions = { module = "com.google.accompanist:accompanist-permissions", version.ref = "accompanist" }
+accompanist-theme-adapter-appcompat = { module = "com.google.accompanist:accompanist-themeadapter-appcompat", version.ref = "accompanist" }
+accompanist-theme-adapter-material3 = { module = "com.google.accompanist:accompanist-themeadapter-material3", version.ref = "accompanist" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }

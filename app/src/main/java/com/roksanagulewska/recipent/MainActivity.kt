@@ -67,7 +67,7 @@ class MainActivity : ComponentActivity() {
             RecipentTheme {
                 Scaffold(
                     //drawer
-                    //floating sction button
+                    //floating action button
                     //content
                     content = {padding ->
                         Text("Test", modifier = Modifier.padding(2.dp))
@@ -144,9 +144,9 @@ class MainActivity : ComponentActivity() {
     fun RecipeCardPreview() {
         val painter = painterResource(id = R.drawable.spaghetti_bolognese)
         val ingredients = listOf<String>("pasta", "tomato", "beef", "mozarella")
-        val recipe = Recipe("Spaghetti bolognese", ingredients, "some method", RecipeCategory.DINNER)
-        recipe.tags.add(Tag.dinnerDefaultTag)
-        recipe.tags.add(Tag.tomatoDefaultTag)//Fix capital letters
+        val recipe = Recipe("Spaghetti bolognese", ingredients, "some method", RecipeCategory.LUNCH_OR_DINNER)
+        recipe.tags.add(Tag.lunchOrDinnerDefaultTag)
+        recipe.tags.add(Tag.tomatoDefaultTag)
         recipe.tags.add(Tag.pastaDefaultTag)
 
         RecipentTheme {
@@ -156,19 +156,13 @@ class MainActivity : ComponentActivity() {
 
     @Composable
     fun TagItem(tag: Tag) {
-        //Surface(color = tag.color.color,
-           // shape = RoundedCornerShape(10.dp)
-        //) {
-        Surface(color = tag.color.color,
+        Surface(color = tag.color,
             shape = RoundedCornerShape(10.dp),
             shadowElevation = 10.dp,
             modifier = Modifier.padding(2.dp)
         ) {
             Text(text = tag.tagName, modifier = Modifier.padding(start = 6.dp, end = 6.dp, top = 3.dp, bottom = 3.dp))
         }
-
-        //}
-
     }
 
     @Preview(showBackground = true, showSystemUi = false)
